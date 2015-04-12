@@ -25,7 +25,7 @@ public class MainActivity extends ActionBarActivity {
     int ICONS[] = {R.drawable.home,R.drawable.direction,R.drawable.mail,R.drawable.call,R.drawable.address,R.drawable.settings};
     String NAME = "Sree Durga Estates";
     String EMAIL = "sreedurgaestates.com";
-    int PROFILE = R.drawable.home2;
+    int PROFILE = R.drawable.home1;
     RecyclerView mRecyclerView;                           // Declaring RecyclerView
     RecyclerView.Adapter mAdapter;                        // Declaring Adapter For Recycler View
     RecyclerView.LayoutManager mLayoutManager;            // Declaring Layout Manager as a linear layout manager
@@ -89,6 +89,14 @@ public class MainActivity extends ActionBarActivity {
 
 
 
+
+
+
+
+
+    }
+    public  void onResume(){
+        super.onResume();
         // Creating The ViewPagerAdapter and Passing Fragment Manager, Titles fot the Tabs and Number Of Tabs.
         adapter =  new ViewPagerAdapter(getSupportFragmentManager(),Titles,Numboftabs);
 
@@ -113,10 +121,8 @@ public class MainActivity extends ActionBarActivity {
         // Setting the ViewPager For the SlidingTabsLayout
         tabs.setViewPager(pager);
 
-
-
-
     }
+
 
 
     public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {

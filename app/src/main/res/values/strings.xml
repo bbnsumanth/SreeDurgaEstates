@@ -7,4 +7,27 @@
     <string name="openDrawer">open</string>
     <string name="closeDrawer">close</string>
 
+    <string-array name="details">
+        <item>http://www.sreedurgaestates.com/ongoing-projects/a4-lounge/index.html</item>
+        <item>http://www.sreedurgaestates.com/ongoing-projects/poorna-pride/index.html</item>
+        <item>http://www.sreedurgaestates.com/ongoing-projects/sree-durgs-estates/index.html</item>
+    </string-array>
+    <string-array name="specs">
+        <item>http://www.sreedurgaestates.com/ongoing-projects/a4-lounge/specification.html</item>
+        <item>http://www.sreedurgaestates.com/ongoing-projects/poorna-pride/specification.html</item>
+        <item>http://www.sreedurgaestates.com/ongoing-projects/sree-durgs-estates/specification.html</item>
+    </string-array>
+    <string-array name="floorplan">
+        <item>http://www.sreedurgaestates.com/ongoing-projects/a4-lounge/layout.html</item>
+        <item>http://www.sreedurgaestates.com/ongoing-projects/poorna-pride/layout.html</item>
+        <item>http://www.sreedurgaestates.com/ongoing-projects/sree-durgs-estates/layout.html</item>
+    </string-array>
+    <string-array name="routemap">
+        <item>http://www.sreedurgaestates.com/ongoing-projects/a4-lounge/route-map.html</item>
+        <item>http://www.sreedurgaestates.com/ongoing-projects/poorna-pride/route-map.html</item>
+        <item>http://www.sreedurgaestates.com/ongoing-projects/sree-durgs-estates/route-map.html</item>
+    </string-array>
+
+    <string name="title_activity_web_page">WebPageActivity</string>
+
 </resources>
