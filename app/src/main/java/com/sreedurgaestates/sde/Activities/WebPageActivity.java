@@ -1,13 +1,18 @@
-package com.sreedurgaestates.sde;
+package com.sreedurgaestates.sde.Activities;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+
+
+
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
 import android.widget.Toast;
+
+import com.sreedurgaestates.sde.R;
 
 
 public class WebPageActivity extends ActionBarActivity {

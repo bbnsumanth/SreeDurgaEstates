@@ -1,4 +1,4 @@
-package com.sreedurgaestates.sde;
+package com.sreedurgaestates.sde.Fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,6 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.sreedurgaestates.sde.Adapters.CardAdapter;
+import com.sreedurgaestates.sde.Data.DataModel;
+import com.sreedurgaestates.sde.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,21 +22,19 @@ import java.util.List;
  */
 public class Tab1 extends Fragment {
 
-
-
     RecyclerView recyclerView;
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
         View v =inflater.inflate(R.layout.tab_1,container,false);
         return v;
+
     }
 
 
 
     public void onActivityCreated (Bundle savedInstanceState){
         super.onActivityCreated(savedInstanceState);
-
-
         List<DataModel> tempList = new ArrayList<DataModel>();
         String[] details = getResources().getStringArray(R.array.details);
         String[] specs = getResources().getStringArray(R.array.specs);
@@ -53,13 +55,11 @@ public class Tab1 extends Fragment {
         }
 
 
+
         recyclerView = (RecyclerView) getActivity().findViewById(R.id.tab1card_recycler);
         recyclerView.setAdapter(new CardAdapter(getActivity(),tempList));
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setHasFixedSize(true);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-
     }
-
-
 }

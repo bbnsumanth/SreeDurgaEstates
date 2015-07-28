@@ -1,4 +1,4 @@
-package com.sreedurgaestates.sde;
+package com.sreedurgaestates.sde.Fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,16 +10,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.sreedurgaestates.sde.Adapters.CardAdapter;
+import com.sreedurgaestates.sde.Data.DataModel;
+import com.sreedurgaestates.sde.R;
+
 import java.util.ArrayList;
 import java.util.List;
+
 
 /**
  * Created by bharat.sumanth on 4/11/2015.
  */
-public class Tab3 extends Fragment {
+public class Tab2 extends Fragment {
     RecyclerView recyclerView;
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v =inflater.inflate(R.layout.tab_3,container,false);
+        View v =inflater.inflate(R.layout.tab_2,container,false);
         return v;
     }
 
@@ -28,8 +33,12 @@ public class Tab3 extends Fragment {
 
 
         List<DataModel> tempList = new ArrayList<DataModel>();
+       // String[] details = getResources().getStringArray(R.array.details);
+        //String[] specs = getResources().getStringArray(R.array.specs);
+       // String[] floorplan = getResources().getStringArray(R.array.floorplan);
+        //String[] routemap = getResources().getStringArray(R.array.routemap);
+        int[] mainimages = {R.drawable.cp1,R.drawable.cp2,R.drawable.cp3,R.drawable.cp4,R.drawable.cp5,R.drawable.cp6,R.drawable.cp7,R.drawable.cp8,R.drawable.cp9,R.drawable.cp10,R.drawable.cp11,R.drawable.cp12};
 
-        int[] mainimages = {R.drawable.fp1,R.drawable.fp2,R.drawable.fp3,R.drawable.fp4};
         int i= 0;
         while(i < mainimages.length){
             DataModel model = new DataModel();
@@ -43,7 +52,7 @@ public class Tab3 extends Fragment {
         }
 
 
-        recyclerView = (RecyclerView) getActivity().findViewById(R.id.tab3card_recycler);
+        recyclerView = (RecyclerView) getActivity().findViewById(R.id.tab2card_recycler);
         recyclerView.setAdapter(new CardAdapter(getActivity(),tempList));
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setHasFixedSize(true);
