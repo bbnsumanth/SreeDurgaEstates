@@ -1,29 +1,24 @@
-package com.sreedurgaestates.sde;
-import android.os.Bundle;
+package com.sreedurgaestates.sde.Activities;
+
 import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.webkit.WebView;
 
+import com.sreedurgaestates.sde.R;
 
-public class WebPageActivity extends ActionBarActivity {
-    WebView browser ;
+public class DetailedActivity extends ActionBarActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_web);
-        browser = (WebView) findViewById(R.id.webview);
-        Bundle b = getIntent().getExtras();
-        String url = (String) b.get("key");
-        browser.loadUrl(url);
-
+        setContentView(R.layout.activity_detailed);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.menu_detailed, menu);
         return true;
     }
 

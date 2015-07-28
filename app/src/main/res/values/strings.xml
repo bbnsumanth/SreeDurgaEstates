@@ -29,5 +29,6 @@
     </string-array>
 
     <string name="title_activity_web_page">WebPageActivity</string>
+    <string name="title_activity_detailed">DetailedActivity</string>
 
 </resources>
