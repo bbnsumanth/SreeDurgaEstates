@@ -1,9 +1,13 @@
 package com.sreedurgaestates.sde;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
+import android.widget.Toast;
 
 
 public class WebPageActivity extends ActionBarActivity {
@@ -15,7 +19,16 @@ public class WebPageActivity extends ActionBarActivity {
         browser = (WebView) findViewById(R.id.webview);
         Bundle b = getIntent().getExtras();
         String url = (String) b.get("key");
-        browser.loadUrl(url);
+
+        final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
+        if (activeNetwork != null && activeNetwork.isConnected()) {
+
+            browser.loadUrl(url);
+        } else {
+            Toast.makeText(this, "Sorry,network is down :( ", Toast.LENGTH_LONG).show();
+        }
+
 
     }
 

@@ -53,7 +53,7 @@ public class Tab1 extends Fragment {
         }
 
 
-        recyclerView = (RecyclerView) getActivity().findViewById(R.id.card_recycler);
+        recyclerView = (RecyclerView) getActivity().findViewById(R.id.tab1card_recycler);
         recyclerView.setAdapter(new CardAdapter(getActivity(),tempList));
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setHasFixedSize(true);

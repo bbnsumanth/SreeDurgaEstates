@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sreedurgaestates.sde" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -19,6 +22,14 @@
         <activity
             android:name=".WebPageActivity"
             android:label="@string/title_activity_web_page"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sreedurgaestates.sde.MainActivity" />
+        </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_activity_about"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
